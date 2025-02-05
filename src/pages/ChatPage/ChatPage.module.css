@@ -1,0 +1,82 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--tg-viewport-height);
+}
+
+.chatContainer {
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.inputContainer {
+  background-color: #fff;
+  position: relative;
+  border-top: 3px solid #000;
+}
+
+.messageInput {
+  width: auto;
+  height: 44px;
+  min-height: 44px;
+  max-height: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 0;
+  outline: none;
+  resize: none;
+}
+
+
+.message {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.messageContent {
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.ownMessage {
+  justify-content: flex-end;
+}
+
+.ownMessage .messageContent {
+  background-color: #007AFF;
+  color: white;
+}
+
+.otherMessage .messageContent {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.sender {
+  font-size: 12px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.timestamp {
+  font-size: 11px;
+  margin-top: 4px;
+  opacity: 0.7;
+  text-align: right;
+}
+
+
+.messageInput:focus {
+  border-color: #007AFF;
+}
