@@ -5,7 +5,6 @@ import mkcert from 'vite-plugin-mkcert';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/reactjs-template',
   plugins: [
     // Allows using React dev server along with building a React application with Vite.
     // https://npmjs.com/package/@vitejs/plugin-react-swc
@@ -19,9 +18,17 @@ export default defineConfig({
     process.env.HTTPS && mkcert(),
   ],
   publicDir: './public',
+  css: {
+    modules: {
+      generateScopedName: '[local]'
+    }
+  },
   server: {
     // Exposes your dev server and makes it accessible for the devices in the same network.
     host: true,
+    allowedHosts: [
+      'localhost',
+      'infinite-maggot-relaxing.ngrok-free.app'
+    ],
   },
 });
-

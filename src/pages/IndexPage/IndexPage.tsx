@@ -22,6 +22,13 @@ export const IndexPage: FC = () => {
               TON Connect
             </Cell>
           </Link>
+          <Link to="/chat">
+            <Cell
+              subtitle="Open chat interface"
+            >
+              Chat
+            </Cell>
+          </Link>
         </Section>
         <Section
           header="Application Launch Data"
